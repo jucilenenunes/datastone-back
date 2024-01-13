@@ -1,0 +1,23 @@
+version: "3.1"
+
+services:
+  mongodb:
+    image: mongo
+    restart: always
+    container_name: datastone_mongodb
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: root
+      MONGO_INITDB_ROOT_PASSWORD: jupass
+
+  mongoexpress:
+    image: mongo-express
+    restart: always
+    ports:
+      - 8081:8081
+    container_name: datastone_mongoexpress
+    environment:
+      ME_CONFIG_MONGODB_ADMINUSERNAME: root
+      ME_CONFIG_MONGODB_ADMINPASSWORD: jupass
+      ME_CONFIG_MONGODB_URL: mongodb://root:jupass@mongodb:27017/
