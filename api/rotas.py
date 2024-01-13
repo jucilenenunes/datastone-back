@@ -1,5 +1,6 @@
 import uvicorn
 from fastapi import FastAPI
+from fastapi.middleware.cors import CORSMiddleware
 
 app = FastAPI(
     title="DataStone API by Ju",
@@ -7,9 +8,57 @@ app = FastAPI(
     swagger_ui_parameters={"syntaxHighlight.theme": "obsidian"}
 )
 
-@app.get("/")
-async def getTeste():
-    return "Olá Ju!"
+origins = [
+    "http://localhost:8080",
+]
+
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=origins,
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
+
+@app.get("/clientes")
+def getClientesRoute():
+    return { "teste": "Ok" }
+
+@app.get("/clientes/{ìd}")
+def getClienteRoute(id: str):
+    return { "teste": "Ok" }
+
+@app.post("/clientes")
+def postClienteRoute(cliente):
+    return { "teste": "Ok" }
+
+@app.put("/clientes/{id}")
+def putClienteRoute(id: str):
+    return { "teste": "Ok" }
+
+@app.delete("/clientes/{id}")
+def putClienteRoute(id: str):
+    return { "teste": "Ok" }
+
+@app.get("/produtos")
+def getProdutosRoute():
+    return { "teste": "Ok" }
+
+@app.get("/produtos/{id}")
+def getProdutoRoute(id: str):
+    return { "teste": "Ok" }
+
+@app.post("/produtos")
+def getProdutoRoute():
+    return { "teste": "Ok" }
+
+@app.put("/produtos/{id}")
+def putProdutoRoute(id: str):
+    return { "teste": "Ok" }
+
+@app.delete("/produtos/{id}")
+def putProdutoRoute(id: str):
+    return { "teste": "Ok" }
 
 def runApi():
     uvicorn.run(app, port=8181)
