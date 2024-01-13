@@ -1,6 +1,7 @@
 import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+from models.cliente import Cliente
 from models.produto import Produto
 
 app = FastAPI(
@@ -30,11 +31,11 @@ def getClienteRoute(id: str):
     return { "teste": "Ok"}
 
 @app.post("/clientes")
-def postClienteRoute():
+def postClienteRoute(cliente: Cliente):
     return { "teste": "Ok"}
 
 @app.put("/clientes/{id}")
-def putClienteRoute(id: str):
+def putClienteRoute(id: str, cliente: Cliente):
     return { "teste": "Ok"}
 
 @app.delete("/clientes/{id}")
