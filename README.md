@@ -20,7 +20,7 @@ Projeto iniciado com Python + FastAPI e base MongoDB na tentativa de conquistar 
  - Para instalar as dependências: `pip install fastapi uvicorn pymongo`
 
 # Como rodar a aplicação
- - Executar o comando: `python .\api\rotas.py`
+ - Executar o comando: `python main.py`
  - Acessar a URL: http://127.0.0.1:8181
  - Usando FastAPI já em habilitada a documentação da API com Swagger nessa URL: http://127.0.0.1:8181/docs
 
