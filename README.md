@@ -12,6 +12,10 @@ Projeto iniciado com Python + FastAPI e base MongoDB na tentativa de conquistar 
  docker-compose up -d
  `
  - Assim que o console concluir a execução significa de que o ambiente está rodando, ai é só acessar o MongoExpress para manipularmos o MongoDB, neste link: http://localhost:8081/.
+ - Crie um banco com nome "datastone" as collections (tabelas) serão criadas pela própria aplicação.
 
- 
+### Anotações sobre como preparar o ambiente Python
+ - Instalar o "Virtual Environment" do Python: `python -m venv env `
+ - Para ativar o "Virtual Environment" `.\env\Scripts\Activate.ps1`
+ - Para instalar as dependências: `pip install fastapi uvicorn pymongo`
 
