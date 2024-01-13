@@ -25,5 +25,7 @@ Projeto iniciado com Python + FastAPI e base MongoDB na tentativa de conquistar 
  - Usando FastAPI já em habilitada a documentação da API com Swagger nessa URL: http://127.0.0.1:8181/docs
 
 # Referências utilizadas
- - Video de API Python com FastAPI: https://www.youtube.com/watch?v=9vRpj0RbkBg
- - Conectar Python no banco MongoDB: https://community.revelo.com.br/como-acessar-o-mongodb-e-gerenciar-dados-com-python/
+ - Videos de API Python com FastAPI: 
+   + [FastAPI](https://www.youtube.com/watch?v=9vRpj0RbkBg)
+   + [FastAPI+MongoDB](https://www.youtube.com/watch?)v=QkGqjPFIGCA
+   + [Conectar Python no banco MongoDB](https://community.revelo.com.br/como-acessar-o-mongodb-e-gerenciar-dados-com-python/)
