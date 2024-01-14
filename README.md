@@ -29,3 +29,10 @@ Projeto iniciado com Python + FastAPI e base MongoDB na tentativa de conquistar 
    + [FastAPI](https://www.youtube.com/watch?v=9vRpj0RbkBg)
    + [FastAPI+MongoDB](https://www.youtube.com/watch?)v=QkGqjPFIGCA
    + [Conectar Python no banco MongoDB](https://community.revelo.com.br/como-acessar-o-mongodb-e-gerenciar-dados-com-python/)
+
+# Considerações finais
+ - Esse foi meu primeiro contato com Python eu não posso afirmar que entendi tudo que fiz, mas posso afirmar que foi um processo prazeroso e que a partir de agora eu tenho certeza que quero também aprender Python e me desenvolver, eu usei os vídeos acima e pesquisas na internet como referencia.
+ - Para ter certeza do funcionamento de toda a API eu criei e alimentei uma collection no meu Postman, depois exportei essa collection e inclui na raiz deste repositório o nome do arquivo é "datastone-by-jucilene.postman_collection.json" para que possam importar e testar também.
+
+ # Agradecimentos
+ Muito obrigado pela oportunidade de demonstrar meus conhecimentos e de me desevoler. Gratidão!!
