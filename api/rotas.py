@@ -2,6 +2,7 @@ import uvicorn
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.produtos.get import getProdutos, getProduto
+from api.clientes.get import getClientes, getCliente
 from models.cliente import Cliente
 from models.produto import Produto
 
@@ -25,11 +26,11 @@ app.add_middleware(
 
 @app.get("/clientes")
 def getClientesRoute():
-    return { "teste": "Ok"}
+    return getClientes()
 
-@app.get("/clientes/{ìd}")
+@app.get("/clientes/{id}")
 def getClienteRoute(id: str):
-    return { "teste": "Ok"}
+    return getCliente(id)
 
 @app.post("/clientes")
 def postClienteRoute(cliente: Cliente):
