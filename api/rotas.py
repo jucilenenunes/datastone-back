@@ -5,7 +5,10 @@ from api.produtos.get import getProdutos, getProduto
 from api.clientes.get import getClientes, getCliente
 from api.produtos.post import postProduto
 from api.clientes.post import postCliente
-
+from api.produtos.put import putProduto
+from api.clientes.put import putCliente
+from api.produtos.delete import deleteProduto
+from api.clientes.delete import deleteCliente
 from models.cliente import Cliente
 from models.produto import Produto
 
@@ -41,11 +44,11 @@ def postClienteRoute(cliente: Cliente):
 
 @app.put("/clientes/{id}")
 def putClienteRoute(id: str, cliente: Cliente):
-    return { "teste": "Ok"}
+    return putCliente(id, dict(cliente))
 
 @app.delete("/clientes/{id}")
 def putClienteRoute(id: str):
-    return { "teste": "Ok"}
+    return deleteCliente(id)
 
 @app.get("/produtos")
 def getProdutosRoute():
@@ -61,11 +64,11 @@ def getProdutoRoute(produto: Produto):
 
 @app.put("/produtos/{id}")
 def putProdutoRoute(id: str, produto: Produto):
-    return { "teste": "Ok"}
+    return putProduto(id, produto)
 
 @app.delete("/produtos/{id}")
 def putProdutoRoute(id: str):
-    return { "teste": "Ok"}
+    return deleteProduto(id)
 
 def runApi():
     uvicorn.run(app, port=8181)
