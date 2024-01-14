@@ -3,6 +3,9 @@ from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from api.produtos.get import getProdutos, getProduto
 from api.clientes.get import getClientes, getCliente
+from api.produtos.post import postProduto
+from api.clientes.post import postCliente
+
 from models.cliente import Cliente
 from models.produto import Produto
 
@@ -13,7 +16,7 @@ app = FastAPI(
 )
 
 origins = [
-    "http://localhost:8080",
+    "*",
 ]
 
 app.add_middleware(
@@ -34,7 +37,7 @@ def getClienteRoute(id: str):
 
 @app.post("/clientes")
 def postClienteRoute(cliente: Cliente):
-    return { "teste": "Ok"}
+    return postCliente(dict(cliente))
 
 @app.put("/clientes/{id}")
 def putClienteRoute(id: str, cliente: Cliente):
@@ -54,7 +57,7 @@ def getProdutoRoute(id: str):
 
 @app.post("/produtos")
 def getProdutoRoute(produto: Produto):
-    return { "teste": "Ok"}
+    return postProduto(dict(produto))
 
 @app.put("/produtos/{id}")
 def putProdutoRoute(id: str, produto: Produto):

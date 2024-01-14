@@ -1,5 +1,5 @@
 from pydantic import BaseModel, Field
-from typing import List
+from typing import List, Optional
 
 class Cliente(BaseModel):
     id: str = Field(default=None)
@@ -8,4 +8,4 @@ class Cliente(BaseModel):
     telefone: str
     email: str
     ativo: bool
-    produtos: List[int]
+    produtos: Optional[List[int]] = []
